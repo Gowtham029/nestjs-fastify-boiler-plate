@@ -15,11 +15,12 @@ export class ResponseTimeInterceptor implements NestInterceptor {
     return next.handle().pipe(
       tap(() => {
         const responseTime = Date.now() - start;
-        this.logger.info(`${method} ${url} - ${responseTime}ms`, {
+        this.logger.info('ResponseTimeInterceptor', JSON.stringify({
           method,
           url,
           responseTime,
-        });
+          message: `${method} ${url} - ${responseTime}ms`,
+        }));
       }),
     );
   }
