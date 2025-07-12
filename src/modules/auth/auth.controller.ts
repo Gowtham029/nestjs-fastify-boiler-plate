@@ -3,7 +3,7 @@ import { ApiTags, ApiOperation, ApiResponse, ApiSecurity } from '@nestjs/swagger
 import { ThrottlerGuard } from '@nestjs/throttler';
 import { AuthService } from './auth.service';
 import { LoginDto } from './dto/login.dto';
-import { Public } from '../shared/decorators/public.decorator';
+import { Public } from '../../shared/decorators/public.decorator';
 
 @ApiTags('Authentication')
 @Controller('auth')

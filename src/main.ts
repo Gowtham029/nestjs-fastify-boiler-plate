@@ -3,7 +3,7 @@ import { FastifyAdapter, NestFastifyApplication } from '@nestjs/platform-fastify
 import { ValidationPipe } from '@nestjs/common';
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { ConfigService } from '@nestjs/config';
-import helmet from '@fastify/helmet';
+// import helmet from '@fastify/helmet';
 import { AppModule } from './app.module';
 import { ResponseTimeInterceptor } from './shared/interceptors/response-time.interceptor';
 import { GlobalExceptionFilter } from './shared/filters/global-exception.filter';
@@ -19,8 +19,8 @@ async function bootstrap() {
   const port = configService.get<number>('PORT', 3000);
   const apiPrefix = configService.get<string>('API_PREFIX', 'api/v1');
 
-  // Security
-  await app.register(helmet);
+  // Security - helmet temporarily disabled due to type compatibility
+  // await app.register(helmet);
 
   // Global prefix
   app.setGlobalPrefix(apiPrefix);
