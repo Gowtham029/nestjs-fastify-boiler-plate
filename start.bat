@@ -1,0 +1,9 @@
+@echo off
+echo Starting NestJS Fastify BFF Application...
+echo.
+echo Installing dependencies...
+call npm install
+echo.
+echo Starting application with Docker Compose...
+call docker-compose up --build
+pause
