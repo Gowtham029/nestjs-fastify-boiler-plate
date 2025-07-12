@@ -15,7 +15,10 @@ module.exports = function (options, webpack) {
       new webpack.WatchIgnorePlugin({
         paths: [/\.js$/, /\.d\.ts$/],
       }),
-
     ],
+    watchOptions: {
+      poll: 1000,
+      ignored: /node_modules/,
+    },
   };
 };

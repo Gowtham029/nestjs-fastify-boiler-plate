@@ -18,6 +18,7 @@ import { User } from '../modules/user/entities/user.entity';
         autoLoadModels: true,
         synchronize: process.env.NODE_ENV === 'development',
         logging: process.env.NODE_ENV === 'development' ? console.log : false,
+        benchmark: process.env.NODE_ENV === 'development' ? true : false,
       }),
       inject: [ConfigService],
     }),

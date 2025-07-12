@@ -6,6 +6,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { AuthModule } from './modules/auth/auth.module';
 import { UsersModule } from './modules/user/users.module';
+import { ExternalApiModule } from './modules/external-api/external-api.module';
 import { DatabaseModule } from './database/database.module';
 import { SharedModule } from './shared/shared.module';
 import configuration from './config/configuration';
@@ -26,6 +27,7 @@ import configuration from './config/configuration';
     SharedModule,
     AuthModule,
     UsersModule,
+    ExternalApiModule,
   ],
   controllers: [AppController],
   providers: [AppService],
