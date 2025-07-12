@@ -20,7 +20,7 @@
     "paths": {
       "@/*": ["src/*"],
       "@shared/*": ["src/shared/*"],
-      "@auth/*": ["src/auth/*"],
+      "@modules/*": ["src/modules/*"],
       "@config/*": ["src/config/*"]
     }
   }

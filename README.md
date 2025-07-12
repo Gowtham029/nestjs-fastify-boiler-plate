@@ -36,14 +36,14 @@ The application will be available at:
 
 1. Install dependencies:
    ```bash
-   npm install
+   pnpm install
    ```
 
 2. Set up PostgreSQL database and update `.env` file
 
 3. Start the application:
    ```bash
-   npm run start:dev
+   pnpm run start:dev
    ```
 
 ## API Endpoints
@@ -75,13 +75,13 @@ curl -H "x-api-key: <api-key>" http://localhost:3000/api/v1/users
 
 ```bash
 # Unit tests
-npm run test
+pnpm run test
 
 # E2E tests
-npm run test:e2e
+pnpm run test:e2e
 
 # Test coverage
-npm run test:cov
+pnpm run test:cov
 ```
 
 ## Production Deployment
@@ -99,14 +99,15 @@ See `.env.example` for all available configuration options.
 
 ```
 src/
-├── auth/                 # Authentication module
+├── modules/             # Feature modules
+│   ├── auth/           # Authentication module
+│   └── user/           # User management module
 ├── config/              # Configuration files
 ├── database/            # Database configuration
-├── shared/              # Shared utilities
-│   ├── decorators/      # Custom decorators
-│   ├── filters/         # Exception filters
-│   ├── guards/          # Auth guards
-│   ├── interceptors/    # Interceptors
-│   └── services/        # Shared services
-└── users/               # Users module
+└── shared/              # Shared utilities
+    ├── decorators/      # Custom decorators
+    ├── filters/         # Exception filters
+    ├── guards/          # Auth guards
+    ├── interceptors/    # Interceptors
+    └── services/        # Shared services
 ```
